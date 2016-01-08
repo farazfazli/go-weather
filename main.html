@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var source = new EventSource("event");
+			source.addEventListener("location", function (event) {
+  				document.getElementById("location").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("time", function (event) {
+  				document.getElementById("time").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("summary", function (event) {
+  			document.getElementById("summary").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("temperature", function (event) {
+  			document.getElementById("temperature").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("1", function (event) {
+  			document.getElementById("1").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("2", function (event) {
+  			document.getElementById("2").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("3", function (event) {
+  			document.getElementById("3").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("4", function (event) {
+  			document.getElementById("4").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("5", function (event) {
+  			document.getElementById("5").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("6", function (event) {
+  			document.getElementById("6").innerHTML = event.data + "<br>";
+			});
+			source.addEventListener("7", function (event) {
+  			document.getElementById("7").innerHTML = event.data + "<br>";
+			});
+		</script>
+		<h3>
+		<div style="width: 100%; overflow: hidden;">
+			<div id="location"></div>
+			<div id="time"></div>
+			<div id="summary"></div>
+			<div id="temperature"></div>
+			<div id="1"></div>
+			<div id="2"></div>
+			<div id="3"></div>
+			<div id="4"></div>
+			<div id="5"></div>
+			<div id="6"></div>
+			<div id="7"></div>
+		</div>
+		</h3>
+	</body>
+</html>
